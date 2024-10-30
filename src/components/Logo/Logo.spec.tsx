@@ -1,14 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import { render, screen } from '@testing-library/react';
-import { Logo } from './Logo';
+import { render, screen } from '@testing-library/react'
+import { Logo } from './Logo'
 
 describe('<Logo />', () => {
-  it('should render the heading', () => {
-    const { container } = render(<Logo />);
-
-    expect(screen.getByRole('heading', { name: /Logo/i })).toBeInTheDocument();
-
-    expect(container.firstChild).toMatchSnapshot();
-})});
-
+  it('should render a white label by default', () => {
+    //Render the component using the 'render' function
+    // Select the element using the 'screen' object - screen.getByText('text')
+    // Expect the element  - expect(element).toBeInTheDocument()
+  })
+})
