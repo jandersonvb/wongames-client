@@ -12,11 +12,12 @@ module.exports = {
     '!src/styles/**' //Ignore styles
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
-  modulePaths: ['<rootDir>/src/'],
+  modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
   },
   moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
     '^styled-components':
       'styled-components/dist/styled-components.browser.cjs.js'
   }
