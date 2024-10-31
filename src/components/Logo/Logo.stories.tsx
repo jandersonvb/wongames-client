@@ -19,6 +19,7 @@ export default {
 
 export const Default: StoryObj = {
   args: {
-    color: 'white'
+    color: 'white',
+    size: 'normal'
   }
 }
