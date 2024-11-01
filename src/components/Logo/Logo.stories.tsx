@@ -20,6 +20,7 @@ export default {
 export const Default: StoryObj = {
   args: {
     color: 'white',
-    size: 'normal'
+    size: 'normal',
+    $hideOnMobile: false
   }
 }
