@@ -16,7 +16,7 @@ const containerModifiers = {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -1rem;
+      bottom: -0.5rem;
       width: 5rem;
       border-bottom: 0.5rem solid ${theme.colors.primary};
     }

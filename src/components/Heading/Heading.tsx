@@ -10,7 +10,7 @@ export type HeadingProps = {
 
 export const Heading = ({
   children,
-  color = 'black',
+  color = 'white',
   lineLeft = false,
   lineBottom = false
 }: HeadingProps) => {

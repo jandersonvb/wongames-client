@@ -25,6 +25,6 @@ export default {
 export const Default: StoryObj = {
   args: {
     children: 'Most Populars',
-    color: 'black'
+    color: 'white'
   }
 }
