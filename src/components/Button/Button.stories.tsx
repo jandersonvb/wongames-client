@@ -18,7 +18,7 @@ export default {
 
 export const Default: StoryObj = {
   args: {
-    children: 'Click me',
+    children: 'Buy now',
     size: 'medium'
   }
 }

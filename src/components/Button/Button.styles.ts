@@ -6,7 +6,7 @@ type ContainerProps = Pick<ButtonProps, 'size'>
 const containerModifiers = {
   small: (theme: DefaultTheme) => css`
     height: 3rem;
-    font-size: ${theme.font.sizes.small};
+    font-size: ${theme.font.sizes.xsmall};
   `,
   medium: (theme: DefaultTheme) => css`
     height: 4rem;
