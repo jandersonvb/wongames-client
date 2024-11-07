@@ -17,17 +17,17 @@ export const Menu = () => {
   return (
     <Container>
       <IconContainer>
-        <MenuIcon />
+        <MenuIcon aria-label="Open Menu" />
       </IconContainer>
       <LogoContainer>
         <Logo $hideOnMobile />
       </LogoContainer>
       <MenuGroup>
         <IconContainer>
-          <SearchIcon />
+          <SearchIcon aria-label="Search" />
         </IconContainer>
         <IconContainer>
-          <ShoppingCartIcon />
+          <ShoppingCartIcon aria-label="Open Shopping Cart" />
         </IconContainer>
       </MenuGroup>
     </Container>
