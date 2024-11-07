@@ -1,0 +1,40 @@
+import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
+
+export const Container = styled.menu`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    padding: ${theme.spacings.small} 0;
+    position: relative;
+  `}
+`
+
+export const LogoContainer = styled.div`
+  ${media.lessThan('medium')`
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  `}
+`
+
+export const IconContainer = styled.div`
+  ${({ theme }) => css`
+    color: ${theme.colors.white};
+    cursor: pointer;
+    height: 2.4rem;
+    width: 2.4rem;
+  `}
+`
+export const MenuGroup = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    > div {
+      margin-left: ${theme.spacings.xsmall};
+    }
+  `}
+`
