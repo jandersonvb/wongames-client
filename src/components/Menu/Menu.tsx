@@ -9,11 +9,16 @@ import { Logo } from '../Logo'
 
 import {
   Container,
+  CreateAccount,
   IconContainer,
   LogoContainer,
   MenuFull,
-  MenuGroup
+  MenuGroup,
+  MenuLink,
+  MenuNav,
+  RegisterBox
 } from './Menu.styles'
+import { Button } from '../Button'
 
 export const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,6 +42,20 @@ export const Menu = () => {
 
       <MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
+        <MenuNav>
+          <MenuLink href="#">Home</MenuLink>
+          <MenuLink href="#">Explore</MenuLink>
+        </MenuNav>
+
+        <RegisterBox>
+          <Button fullWidth size="large">
+            Log in now
+          </Button>
+          <span>or</span>
+          <CreateAccount href="#" title="Sign Up">
+            Sign Up
+          </CreateAccount>
+        </RegisterBox>
       </MenuFull>
     </Container>
   )

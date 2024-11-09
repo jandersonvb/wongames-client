@@ -38,7 +38,7 @@ describe('<Menu />', () => {
     expect(fullMenuElement.getAttribute('aria-hidden')).toBe('false')
     expect(fullMenuElement).toHaveStyle({ opacity: 1 })
 
-    //Selecionar o botão de abrir o menu
+    //Selecionar o botão de fechar o menu
     const closeMenu = screen.getByLabelText(/close menu/i)
 
     //Clicar no botão de fechar o menu e verificar se ele fechou
