@@ -20,7 +20,11 @@ import {
 } from './Menu.styles'
 import { Button } from '../Button'
 
-export const Menu = () => {
+export type MenuProps = {
+  username?: string
+}
+
+export const Menu = ({ username }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -45,17 +49,26 @@ export const Menu = () => {
         <MenuNav>
           <MenuLink href="#">Home</MenuLink>
           <MenuLink href="#">Explore</MenuLink>
+
+          {!!username && (
+            <>
+              <MenuLink href="#">My account</MenuLink>
+              <MenuLink href="#">Wishlist</MenuLink>
+            </>
+          )}
         </MenuNav>
 
-        <RegisterBox>
-          <Button fullWidth size="large">
-            Log in now
-          </Button>
-          <span>or</span>
-          <CreateAccount href="#" title="Sign Up">
-            Sign Up
-          </CreateAccount>
-        </RegisterBox>
+        {!username && (
+          <RegisterBox title="Sign In">
+            <Button fullWidth size="large">
+              Log in now
+            </Button>
+            <span>or</span>
+            <CreateAccount href="#" title="Sign Up">
+              Sign Up
+            </CreateAccount>
+          </RegisterBox>
+        )}
       </MenuFull>
     </Container>
   )
