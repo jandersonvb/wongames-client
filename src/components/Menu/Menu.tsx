@@ -5,6 +5,8 @@ import { ShoppingCart as ShoppingCartIcon } from '@styled-icons/material-outline
 import { Search as SearchIcon } from '@styled-icons/material-outlined/Search'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
+import { MediaMatch } from '../MediaMatch'
+
 import { Logo } from '../Logo'
 
 import {
@@ -29,12 +31,23 @@ export const Menu = ({ username }: MenuProps) => {
 
   return (
     <Container>
-      <IconContainer onClick={() => setIsOpen(true)}>
-        <MenuIcon aria-label="Open Menu" />
-      </IconContainer>
+      <MediaMatch lessThan="medium">
+        <IconContainer onClick={() => setIsOpen(true)}>
+          <MenuIcon aria-label="Open Menu" />
+        </IconContainer>
+      </MediaMatch>
+
       <LogoContainer>
         <Logo $hideOnMobile />
       </LogoContainer>
+
+      <MediaMatch greaterThan="medium">
+        <MenuNav>
+          <MenuLink href="#">Home</MenuLink>
+          <MenuLink href="#">Explore</MenuLink>
+        </MenuNav>
+      </MediaMatch>
+
       <MenuGroup>
         <IconContainer>
           <SearchIcon aria-label="Search" />
@@ -42,6 +55,12 @@ export const Menu = ({ username }: MenuProps) => {
         <IconContainer>
           <ShoppingCartIcon aria-label="Open Shopping Cart" />
         </IconContainer>
+
+        {!username && (
+          <MediaMatch greaterThan="medium">
+            <Button>Sign In</Button>
+          </MediaMatch>
+        )}
       </MenuGroup>
 
       <MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
